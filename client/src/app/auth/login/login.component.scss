@@ -17,10 +17,6 @@
   form {
     width: 333px;
 
-    a:link, a:visited, a:active {
-      color: #3c4859;
-    }
-
     a:hover {
       text-decoration: underline;
     }
@@ -57,6 +53,10 @@
     width: 333px;
     font-weight: 600;
     margin: 15px 0px 0px 0px;
+  }
+
+  .create-account {
+    margin: 10px 0px 0px 0px;
   }
 }
 
