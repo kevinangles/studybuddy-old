@@ -1,0 +1,54 @@
+.wrapper {
+  max-width: 500px;
+  margin: 25px auto 0px auto;
+  padding: 0px 15px 25px 15px;
+  border-radius: 10px;
+  justify-content: center;
+
+  .sm-title {
+    color: #3c4859;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0px 15px 0px;
+    text-align: center;
+  }
+
+  .title {
+    color: #3c4859;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 15px 0px 15px 0px;
+  }
+
+  img {
+    width: 100%;
+    max-height: 400px;
+  }
+
+  button {
+    background-color: #fcbe32;
+    color: #3c4859;
+    font-weight: 600;
+    margin: 15px 0px 0px 0px;
+  }
+
+  button:hover {
+    color: white;
+  }
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    .sm-title {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    .title {
+      display: none;
+    }
+  }
+}

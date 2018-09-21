@@ -1,0 +1,203 @@
+.main {
+  height: calc(100vh - 140px);
+  padding: 27vh 0px 0px 0px;
+  // background: url("/assets/img/crowd.svg") no-repeat bottom;
+  background-color: #fcbe32;
+
+  .title {
+    color:white;
+    font-size: 13vmin;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  .buttons {
+    margin: 15px 0px 0px 0px;
+    justify-content: center;
+  }
+
+  .register-button {
+    width: 125px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 25px 0px 0px;
+  }
+
+  .register-button:hover {
+    color: #fcbe32;
+  }
+
+  .login-button {
+    width: 125px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .login-button:hover {
+    color: #fcbe32;
+  }
+}
+
+.learn-more {
+  background-color: #3c4859;
+  color: #fcbe32;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px 0px 0px 0px;
+  justify-content: center;
+}
+
+.who-we-are {
+  background-color: #3c4859;
+  color: white;
+  padding: 40px 0px 60px 0px;
+
+  .wrapper {
+    max-width: 625px;
+    margin: 0px auto;
+  }
+
+  .content {
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+  }
+}
+
+.how-to {
+  background-color: #3c4859;
+  padding: 20px 0px 40px 0px;
+  justify-content: center;
+
+  .title {
+    color: #fcbe32;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 0px 20px 0px;
+    justify-content: center;
+  }
+
+  .step-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0px 0px 0px;
+    justify-content: center;
+  }
+
+  .step-image {
+    height: 75px;
+    margin: 30px 0px 30px 0px;
+    justify-content: center;
+  }
+
+  .step-description {
+    color: #9facbd;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px 0px 50px 0px;
+    justify-content: center;
+  }
+}
+
+.register {
+  background-color: #fcbe32;
+  padding: 125px 0px 77px 0px;
+
+  .wrapper {
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    margin: 0px auto 0px auto;
+    padding: 50px 0px 0px 0px;
+    border-radius: 10px;
+    text-align: center;
+
+    h3 {
+      color: #3c4859;
+      font-weight: 600;
+      margin: 0px 0px 30px 0px;
+    }
+
+    .content {
+      color: #9facbd;
+      margin: 0px 0px 30px 0px;
+    }
+
+    .register-button {
+      width: 150px;
+      background-color: #fcbe32;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    a.register-button:hover {
+      color: #3c4859;
+    }
+  }
+}
+
+.footer {
+  background-color: #3c4859;
+  color: white;
+  padding: 50px 0px 50px 0px;
+
+  .col-md-4 {
+    padding: 0px 0px 0px 100px;
+  }
+
+  h3 {
+    color: #fcbe32;
+  }
+
+  .copyright {
+    margin: 25px 0px 0px 0px;
+    justify-content: center;
+  }
+
+  a:link, a:visited, a:active {
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 576px) {
+  .main {
+    background-image: none;
+  }
+
+  .register {
+    background-image: url("/assets/img/register-bg.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 767px) {
+  .who-we-are {
+    .content {
+      width: 350px;
+      margin: 0px auto;
+      justify-content: center;
+    }
+  }
+
+  .register {
+    .wrapper {
+      width: 350px;
+    }
+  }
+
+  .footer {
+    .col-md-4 {
+      padding: 0px 0px 0px 50px;
+    }
+  }
+}

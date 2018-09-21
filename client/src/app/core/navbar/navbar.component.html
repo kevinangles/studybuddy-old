@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <a class="navbar-brand" href="/welcome" *ngIf="!coreService.isAuthenticated"> Studybuddy </a>
+  <a class="navbar-brand" href="/home" *ngIf="coreService.isAuthenticated"> Studybuddy </a>
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> </ul>
+    <form class="form-inline my-2 my-lg-0" [formGroup]="loginForm">
+      <div *ngIf="!coreService.isAuthenticated" class="form-row align-items-center">
+        <div class="col-auto">
+          <input type="email" class="form-control form-control-sm" formControlName="email" placeholder="Email">
+        </div>
+        <div class="col-auto">
+          <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Password">
+        </div>
+        <div class="col-auto">
+          <button type="button" (click)="post()" class="btn login-button btn-sm">Log in</button>
+        </div>
+      </div>
+      <div *ngIf="coreService.isAuthenticated" class="form-row align-items-center">
+        <div class="col-auto">
+          <button type="submit" class="btn btn-sm">Account</button>
+        </div>
+        <div class="col-auto">
+          <button type="submit" (click)="coreService.logout()" [routerLink]="['/welcome']" class="btn btn-sm">Log out</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>

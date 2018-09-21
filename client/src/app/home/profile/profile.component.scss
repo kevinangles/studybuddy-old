@@ -1,0 +1,51 @@
+.wrapper {
+  max-width: 500px;
+  background-color: white;
+  margin: 25px auto 0px auto;
+  padding: 0px 15px 50px 15px;
+  border-radius: 10px;
+  justify-content: center;
+
+  .profile-picture {
+    width: 100%;
+    margin: 25px 0px 0px 0px;
+    text-align: center;
+
+    .image {
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .user-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 25px 0px 0px 0px;
+    text-align: center;
+  }
+
+  .user-info {
+    width: 100%;
+    font-size: 16px;
+    padding: 25px;
+    border-radius: 10px;
+
+    .info-title {
+      font-weight: 600;
+    }
+  }
+
+  .request-button {
+    margin: 15px 0px 0px 0px;
+    background-color: #fcbe32;
+    color: #3c4859;
+    font-weight: 600;
+  }
+
+  .request-button:hover {
+    color: white;
+  }
+}
+
+@media (min-width: 992px) {
+}

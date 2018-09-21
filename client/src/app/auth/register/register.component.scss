@@ -1,0 +1,91 @@
+.wrapper {
+  max-width: 500px;
+  background-color: white;
+  margin: 25px auto 0px auto;
+  padding: 0px 15px;
+  border-radius: 10px;
+  justify-content: center;
+
+  .title {
+    width: 100%;
+    color: #3c4859;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  hr {
+    width: 100%;
+    margin: 15px 0px 25px 0px;
+  }
+
+  form {
+    width: 333px;
+
+    a:link, a:visited, a:active {
+      color: #3c4859;
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: red;
+    }
+
+    .first-name, .last-name {
+      padding: 0px 15px;
+    }
+
+    .major-textbox {
+      margin: 16px 0px 0px 0px;
+    }
+
+    .reference-form {
+      margin: 0px;
+    }
+
+    .reference-textbox {
+      margin: 16px 0px 0px 0px;
+    }
+
+    .find-link {
+      text-align: right;
+      margin: 0px 0px 15px 0px;
+    }
+
+    .register-button {
+      background-color: #fcbe32;
+      color: #3c4859;
+      margin: 25px 0px 0px 0px;
+      font-weight: 600;
+    }
+
+    .register-button:hover {
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .wrapper {
+    .title {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    .title {
+      margin: 30px 0px 0px 0px;
+    }
+
+    form {
+      .first-name {
+        padding: 0px 7.5px 0px 15px;
+      }
+
+      .last-name {
+        padding: 0px 15px 0px 7.5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="wrapper">
+    <div class="title row">
+      Classes
+    </div>
+    <hr>
+    <!-- {{ courses | json }} -->
+    <div class="boxes row">
+      <div class="box col-md-6" *ngFor="let course of courses">
+        <div class="card-body class-body" [routerLink]="['/results', course.code]">
+          <h5 class="card-title"> {{ course.name }}</h5>
+          <p class="card-text"> {{ course.code }}</p>
+        </div>
+      </div>
+      <div class="box col-md-6">
+        <div class="card-body add-body">
+          <!-- <p class="card-title"> Click here to</p>
+          <p class="card-title"> add another class </p> -->
+          <img src="assets/img/add-icon.svg" style="height: 80%; margin: 5px 0px 0px 0px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,54 @@
+.wrapper {
+  .title {
+    max-width: 1000px;
+    color: #3c4859;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 25px auto 0px auto;
+  }
+
+  hr {
+    max-width: 1000px;
+    margin: 10px auto 25px auto;
+  }
+
+  .box {
+    margin: 0px 0px 15px 0px;
+    cursor: pointer;
+
+    .card-body {
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .class-body {
+      background-color: #3c4859;
+      color: #fcbe32;
+    }
+
+    .card-text {
+      color: white;
+    }
+
+    .add-body {
+      height: 100px;
+      background-color: #3c4859;
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 20vh 0px 0px 0px;
+  }
+
+  .boxes {
+    max-width: 1000px;
+    margin: 0px auto;
+  }
+}
+

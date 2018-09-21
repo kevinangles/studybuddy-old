@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="wrapper row">
+        <div class="profile-picture">
+          <img [src]="user.profile_picture" class="image">
+        </div>
+        <div class="user-name">
+          {{ user?.first_name }} {{ user.last_name }}
+        </div>
+        <div class="user-info">
+          <span class="info-title">Major: </span> {{ user.major }}<br>
+          <span class="info-title"> Phone number: </span> {{user.phone_number}}<br>
+        </div>
+        <button type="button" class="btn request-button btn-lg btn-block">Send Request</button>
+      </div>
+    </div>
+  </div>
+</div>

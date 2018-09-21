@@ -1,0 +1,48 @@
+.wrapper {
+  max-width: 500px;
+
+  .title {
+    color: #3c4859;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 25px 0px 0px 0px;
+  }
+
+  hr {
+    margin: 10px auto 25px auto;
+  }
+
+  .media {
+    background-color: #3c4859;
+    color: white;
+    padding: 25px;
+    margin: 0px 0px 15px 0px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    .user-name {
+      color: #fcbe32;
+    }
+
+    .professor-name {
+      color: white;
+    }
+  }
+
+  .profile-picture {
+    width: 50px;
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    margin: 0px auto;
+
+    .media {
+      margin: 0px auto 15px auto;
+    }
+  }
+}
+

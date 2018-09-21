@@ -1,0 +1,118 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="wrapper row">
+        <div class="title">
+          Register
+        </div>
+        <div>
+          <hr>
+          <form id="form" [formGroup]="registerForm">
+            <!-- Values: {{ registerForm.value | json }} -->
+            <div class="row">
+              <div class="first-name form-group col-md-6">
+                <input type="text" formControlName="first_name" class="form-control" placeholder="First name" tabindex="1">
+                <small *ngIf="first_name.hasError('required') && first_name.touched" class="form-text error-message">First
+                  name is required</small>
+                <small *ngIf="first_name.hasError('maxlength') && first_name.touched" class="form-text error-message">First
+                  name must be 32 characters or less</small>
+              </div>
+
+              <div class="last-name form-group col-md-6">
+                <input type="text" formControlName="last_name" class="form-control" placeholder="Last name" tabindex="2">
+                <small *ngIf="last_name.hasError('required') && last_name.touched" class="form-text error-message">Last
+                  name is required</small>
+                <small *ngIf="last_name.hasError('maxlength') && last_name.touched" class="form-text error-message">Last
+                  name must be 32 characters or less</small>
+              </div>
+            </div>
+            <!-- Gender radio buttons -->
+            <!-- <div class="form-group">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="gender" formControlName="gender" value="Female" id="Female" class="custom-control-input" tabindex="3">
+                <label class="custom-control-label" for="Female">Female</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="gender" formControlName="gender" value="Male" id="Male" class="custom-control-input" tabindex="4">
+                <label class="custom-control-label" for="Male">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="gender" formControlName="gender" value="Non-binary" id="Non-binary" class="custom-control-input"
+                  tabindex="5">
+                <label class="custom-control-label" for="Non-binary">Non-binary</label>
+              </div>
+              <small *ngIf="gender.invalid && email.touched" class="form-text error-message">Gender is required</small>
+            </div> -->
+            <div class="form-group">
+              <input type="text" formControlName="phone" class="form-control" placeholder="Phone number" tabindex="3">
+              <small *ngIf="phone.hasError('required') && phone.touched" class="form-text error-message">Phone number
+                is
+                required</small>
+              <small *ngIf="phone.hasError('maxlength') && phone.touched" class="form-text error-message">Phone number
+                must be 10 numbers or less</small>
+            </div>
+            <!-- Email textbox -->
+            <div class="form-group">
+              <input type="email" formControlName="email" class="form-control" placeholder="Email" tabindex="4">
+              <small *ngIf="email.hasError('required') && email.touched" class="form-text error-message">Email is
+                required</small>
+              <small *ngIf="email.hasError('maxlength') && email.touched" class="form-text error-message">Email must be
+                32 characters or less</small>
+            </div>
+            <!-- Password textbox -->
+            <div class="form-group">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password" tabindex="5">
+              <small *ngIf="password.invalid && password.touched" class="form-text error-message">Password must contain
+                a
+                minimum of eight characters, including at least one uppercase letter, one lowercase letter,
+                one number and one special character</small>
+              <small *ngIf="password.hasError('maxlength') && password.touched" class="form-text error-message">Password
+                must be 32 characters or less</small>
+            </div>
+            <!-- Upload picture -->
+            <!-- <div class="form-group custom-file">
+                <input type="file" class="custom-file-input" id="upload" tabindex="8">
+                <label class="custom-file-label" for="customFile">Choose picture</label>
+            </div> -->
+            <!-- Major dropdown -->
+            <div class="form-group major-textbox">
+              <select class="form-control" formControlName="major" tabindex="6">
+                <option value="" disabled selected> Select your major </option>
+                <option *ngFor="let major of majors" (ngValue)="major">{{ major }}</option>
+              </select>
+              <small *ngIf="major.invalid && major.touched" class="form-text error-message">Major is required</small>
+            </div>
+            <!-- Reference number textbox -->
+            <div class="form-group reference-form" formArrayName="references">
+              <div class="form-group reference-textbox" *ngFor="let reference of referencesForm.controls; let i = index;">
+                <div class="input-group">
+                  <input type="number" formControlName="{{i}}" class="form-control" placeholder="Reference number"
+                    tabindex="7">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary" (click)="removeReference(i)">-</button>
+                  </div>
+                </div>
+                <small *ngIf="referencesForm.at(i).hasError('required') && referencesForm.at(i).touched" class="form-text error-message">At
+                  least one reference number is required</small>
+                <small *ngIf="referencesForm.at(i).hasError('maxlength') && referencesForm.at(i).touched" class="form-text error-message">Reference
+                  numbers are 5 digits long</small>
+              </div>
+            </div>
+            <!-- Reference number help link -->
+            <div class="find-link">
+              <a href="https://login.fiu.edu/myfiu/" target="_blank">Find reference numbers</a>
+            </div>
+            <!-- Add reference number button -->
+            <div class="add-button">
+              <button type="button" class="btn btn-outline-secondary btn-sm btn-block" (click)="addReference()">Add
+                another reference number</button>
+            </div>
+            <!-- Register button -->
+            <button type="button" [disabled]="registerForm.invalid" (click)="post()" [routerLink]="['/home']" class="btn register-button btn-block"
+              tabindex="8">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
