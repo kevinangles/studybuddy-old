@@ -1,7 +1,6 @@
 .main {
   height: calc(100vh - 140px);
   padding: 27vh 0px 0px 0px;
-  // background: url("/assets/img/crowd.svg") no-repeat bottom;
   background-color: #fcbe32;
 
   .title {
@@ -129,14 +128,14 @@
     .register-button {
       width: 150px;
       background-color: #fcbe32;
-      color: white;
+      color: #3c4859;
       font-size: 18px;
       font-weight: 600;
       border-radius: 5px;
     }
 
     a.register-button:hover {
-      color: #3c4859;
+      color: white;
     }
   }
 }

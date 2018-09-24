@@ -23,13 +23,15 @@
             <button type="button" (click)="post()" class="btn login-button btn-block" tabindex="4">Log in</button>
           </form>
         </div>
-
         <div class="separator">
           <div> <hr> </div>
-          <div> OR </div>
+          <div class="separator-text"> OR </div>
           <div> <hr> </div>
         </div>
-        <a class="btn btn-outline-secondary register-button btn-block" [routerLink]="['/register']" role="button" tabindex="5">Register</a>
+        <!-- <a class="btn btn-outline-secondary register-button btn-block" [routerLink]="['/register']" role="button" tabindex="5">Create an account</a> -->
+        <div class="create-account">
+          New to Studybuddy? <a [routerLink]="['/register']">Create an account.</a>
+        </div>
       </div>
     </div>
   </div>
